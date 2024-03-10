@@ -34,6 +34,38 @@
         </li>
       </ul>
     </div>
+    @if(!auth.user)
+      <form method="post" action="{{ route('auth.register') }}">
+        <div>
+          <label for="email">E-Mail</label>
+          <input type="email" name="email" placeholder="email" id="email">
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="Password" id="password">
+        </div>
+        <button type="submit">Register</button>
+      </form>
+      <small>To Login Use: admin@mail.com or user@mail.com with password > Password123!</small>
+      <form method="post" action="{{ route('auth.login') }}">
+        <div>
+          <label for="email">E-Mail</label>
+          <input type="email" name="email" placeholder="email" id="email">
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="Password" id="password">
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    @else
+      @if(auth.user.isAdmin)
+        <p>Admin User <br /> {{ auth.user.email }}</p>
+      @else
+        <p>Regular User <br /> {{ auth.user.email }}</p>
+      @endif
+      <a href="{{ route('auth.logout') }}">Logout</a>
+    @endif
   </main>
 </body>
 </html>
