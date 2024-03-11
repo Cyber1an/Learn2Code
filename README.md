@@ -18,6 +18,15 @@ Ensure you have Node.js version 20.11 LTS or newer installed on your machine. To
 3. Run the installer and follow the prompts to complete the installation.
 4. After installation, open a command prompt or PowerShell and run `node -v` to verify the installation. The version should be 20.11 or newer.
 
+## Before you Clone the Repository
+Install GIT for your Operating System with default installation
+
+### the open GIT Bash or terminal and configure [GIT Globals](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
+```bash
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
 ## 2. Clone the Repository
 
 Clone the `Learn2Code` repository from GitHub to your local machine by running the following command in your preferred terminal:
@@ -76,5 +85,10 @@ npm run dev
 ```
 
 Your project should now be up and running. Open your web browser and navigate to the provided local server address (usually `http://localhost:3333`) to view the project.
+
+### You should see something like this
+
+![Image](https://github.com/Cyber1an/Learn2Code/assets/13891890/f302f246-fb8d-406d-a404-b0cdf8b7047e)
+
 
 If you encounter any issues during the setup, please review the steps to ensure all instructions were followed correctly. For further assistance, contact the project maintainers or consult the project documentation.
